@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ประวัติส่วนตัว</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <navbar>
+        <div class="logo">Portfolio✨</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >หน้าแรก</a></li><li><a href="about.html" class="active">ประวัติส่วนตัว</a></li><li><a href="skills.html" >ทักษะ</a></li><li><a href="portfolio.html" >ผลงาน</a></li><li><a href="certificates.html" >เกียรติบัตร</a></li><li><a href="activities.html" >รูปกิจกรรม</a></li><li><a href="goals.html" >เป้าหมาย</a></li><li><a href="contact.html" >ติดต่อ</a></li>
+        </ul>
+    </navbar>
+    
+    <main>
+        <h1 class="page-title">ประวัติส่วนตัว (About Me)</h1>
+        <p class="page-subtitle">เรื่องราว ตัวตน และความหลงใหลในโลกเทคโนโลยีของหนู 🌸</p>
+
+        <!-- Section 1: รูปภาพของเรา (ปรับแก้ให้รูปไม่โดนตัด/ไม่เลื่อน) -->
+        <div class="card" style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="color: #db2777; margin-bottom: 1rem; font-size: 1.3rem;">📸 ภาพถ่ายของฉัน (My Gallery)</h2>
+            
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                <!-- รูปที่ 1 -->
+                <div style="flex: 1; min-width: 250px; border-radius: 16px; overflow: hidden;">
+                    <img src="img/8.jpg" alt="Profile Picture" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+                </div>
+                <!-- รูปที่ 2 -->
+                <div style="flex: 1; min-width: 250px; border-radius: 16px; overflow: hidden;">
+                    <img src="img/7.jpg" alt="Profile Picture" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+                </div>
+            </div>
+            
+            <p style="margin-top: 0.8rem; font-size: 0.9rem; color: var(--text-muted);">บรรยากาศและความทรงจำต่างๆ</p>
+        </div>
+
+        <!-- Section 2: ข้อมูลส่วนตัวแบบกรอบแต่ละบรรทัด (Boxed Info Grid) -->
+        <div class="card" style="margin-bottom: 2rem;">
+            <h2 style="color: #0284c7; margin-bottom: 0.8rem; font-size: 1.3rem;">🌸 ข้อมูลส่วนตัว (Personal Details)</h2>
+            
+            <div class="info-box-grid">
+                <div class="info-box">
+                    <div class="info-label">👤 ชื่อจริง-นามสกุล</div>
+                    <div class="info-value">นางสาวสิโรชินี เมษา</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">🎀 ชื่อเล่น</div>
+                    <div class="info-value">อิน</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">🇹🇭 สัญชาติ / เชื้อชาติ</div>
+                    <div class="info-value">ไทย / ไทย</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">🎂 วัน/เดือน/ปีเกิด</div>
+                    <div class="info-value">24 ตุลาคม พ.ศ.2552</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">📚 แผนการเรียน</div>
+                    <div class="info-value">คณิตศาสตร์ - คอมพิวเตอร์</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">🗣️ ทักษะภาษา</div>
+                    <div class="info-value">ไทย (Native), อังกฤษ (Intermediate)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: งานอดิเรก (Hobbies) -->
+        <div class="card" style="margin-bottom: 2rem;">
+            <h2 style="color: #db2777; margin-bottom: 1.2rem; font-size: 1.3rem;">🎨 งานอดิเรก & สิ่งที่ชอบทำ (Hobbies & Interests)</h2>
+            <div class="grid-4">
+                <div class="hobby-card">
+                    <div class="hobby-icon">💻</div>
+                    <div class="hobby-title">Coding & Web Design</div>
+                    <div class="hobby-desc">ลองเขียนเว็บหน้าใหม่ๆ และฝึกเขียน CSS ให้มีดีไซน์น่ารัก</div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🤖</div>
+                    <div class="hobby-title">Robotics & IoT</div>
+                    <div class="hobby-desc">ต่อบอร์ด EV3 และทดลองต่อเซนเซอร์สนุกๆ</div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎧</div>
+                    <div class="hobby-title">Listening to Lo-fi</div>
+                    <div class="hobby-desc">ดูซีรีย์ ฟังเพลง Lo-fi เพลินๆ ระหว่างหาไอเดียสร้างโปรเจกต์</div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎨</div>
+                    <div class="hobby-title">Digital Art & Figma</div>
+                    <div class="hobby-desc">ออกแบบหน้าจอ UI แอปพาสเทลและจัดโทนสีมินิมอล</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: ประวัติการศึกษา -->
+        <div class="card">
+            <h2 style="color: #0284c7; margin-bottom: 1.5rem; font-size: 1.3rem;">🎓 ประวัติการศึกษา (Education History)</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">ปีการศึกษา 2568 - ปัจจุบัน</div>
+                    <div class="timeline-school">โรงเรียนธาตุนารายณ์วิทยา</div>
+                    <div class="timeline-degree">ระดับมัธยมศึกษาตอนปลาย (ม.4 - ม.6) • แผนการเรียนคณิตศาสตร์-คอมพิวเตอร์</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">ปีการศึกษา 2564 - 2567</div>
+                    <div class="timeline-school">โรงเรียนธาตุนารายณ์วิทยา</div>
+                    <div class="timeline-degree">ระดับมัธยมศึกษาตอนต้น (ม.1 - ม.3) • เกรดเฉลี่ยสะสม: 3.97</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">ปีการศึกษา 2557 - 2563</div>
+                    <div class="timeline-school">โรงเรียนชุมชนดงมะไฟเจริญศิลป์</div>
+                    <div class="timeline-degree">ระดับประถมศึกษา (ป.1 - ป.6)</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2026 Crafted with 💖 & 💻 Code by Soft Cyber Tech Girl. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>

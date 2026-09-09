@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ติดต่อสอบถาม</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <navbar>
+        <div class="logo">Portfolio✨</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >หน้าแรก</a></li><li><a href="about.html" >ประวัติส่วนตัว</a></li><li><a href="skills.html" >ทักษะ</a></li><li><a href="portfolio.html" >ผลงาน</a></li><li><a href="certificates.html" >เกียรติบัตร</a></li><li><a href="activities.html" >รูปกิจกรรม</a></li><li><a href="goals.html" >เป้าหมาย</a></li><li><a href="contact.html" class="active">ติดต่อ</a></li>
+        </ul>
+    </navbar>
+    
+    <main>
+        <h1 class="page-title">ติดต่อสอบถาม (Contact Me)</h1>
+        <p class="page-subtitle">ยินดีต้อนรับทุกการติดต่อ พูดคุย หรือแลกเปลี่ยนเรื่องเทคโนโลยีค่ะ 🌸</p>
+
+        <div class="grid-2">
+            <!-- Contact Info Card -->
+            <div class="card">
+                <h2 style="color: #db2777; margin-bottom: 1.5rem; font-size: 1.3rem;">💌 ช่องทางติดต่อส่วนตัว</h2>
+                
+                <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                    <div>
+                        <strong style="color: var(--text-primary); display: block;">📧 Email:</strong>
+                        <span style="color: var(--text-secondary);">yourname.dev@gmail.com</span>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary); display: block;">🐙 GitHub:</strong>
+                        <a href="https://github.com" target="_blank" style="color: #0284c7; text-decoration: none; font-weight: 600;">github.com/your-username</a>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary); display: block;">💼 LinkedIn:</strong>
+                        <a href="https://linkedin.com" target="_blank" style="color: #0284c7; text-decoration: none; font-weight: 600;">linkedin.com/in/your-profile</a>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary); display: block;">📱 Instagram / Socials:</strong>
+                        <span style="color: var(--text-secondary);">@softcyber.girl</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Card -->
+            <div class="card">
+                <h2 style="color: #0284c7; margin-bottom: 1.5rem; font-size: 1.3rem;">💬 ฝากข้อความ (Leave a Message)</h2>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('ขอบคุณสำหรับข้อความค่ะ! (ตัวอย่างฟอร์ม)');">
+                    <div class="form-group">
+                        <label for="name">ชื่อ-นามสกุลของคุณ</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="ระบุชื่อของคุณ..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">อีเมลสำหรับติดต่อกลับ</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">ข้อความที่ต้องการฝากไว้</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="พิมพ์ข้อความของคุณที่นี่..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%;">ส่งข้อความ 🚀</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2026 Crafted with 💖 & 💻 Code by Soft Cyber Tech Girl. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>

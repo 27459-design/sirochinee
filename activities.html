@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - รูปภาพกิจกรรม</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <navbar>
+        <div class="logo">Portfolio✨</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >หน้าแรก</a></li><li><a href="about.html" >ประวัติส่วนตัว</a></li><li><a href="skills.html" >ทักษะ</a></li><li><a href="portfolio.html" >ผลงาน</a></li><li><a href="certificates.html" >เกียรติบัตร</a></li><li><a href="activities.html" class="active">รูปกิจกรรม</a></li><li><a href="goals.html" >เป้าหมาย</a></li><li><a href="contact.html" >ติดต่อ</a></li>
+        </ul>
+    </navbar>
+    
+    <main>
+        <h1 class="page-title">รวมภาพกิจกรรม (Activities Gallery)</h1>
+        <p class="page-subtitle">คลิกที่กิจกรรมเพื่อขยายดูอัลบั้มรูปภาพกิจกรรมแบบสไลด์ 📸✨</p>
+
+        <div class="grid-3">
+            <!-- Activity 1 -->
+            <div class="activity-card" onclick="openGallery([
+                'img/activities/1.jpg',
+                'img/activities/2.jpg',
+                'img/activities/3.jpg',
+                'img/activities/4.jpg'
+            ], '🚀 กิจกรรมงานวันวิทยาศาสตร์และเทคโนโลยี', 'ผู้ดูแลการแข่งงาน EsSports')">
+                <div class="img-zoom-container">
+                    <img src="img/activities/7.jpg" alt="Science Day">
+                </div>
+                <h3 style="font-size: 1.2rem; color: #0284c7; margin-bottom: 0.4rem;">🚀 กิจกรรมงานวันวิทยาศาสตร์</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    ภาพบรรยากาศการแข่งขันEsSports
+                </p>
+                <div style="margin-top: 0.8rem; font-size: 0.85rem; color: #0284c7; font-weight: 700;">🔍 คลิกเพื่อดูรูปเพิ่มเติม (4 รูป) &rarr;</div>
+            </div>
+
+            <!-- Activity 2 -->
+            <div class="activity-card" onclick="openGallery([
+                'img/activities/11.jpg',
+                'img/activities/12.jpg',
+                'img/activities/13.jpg',
+                'img/activities/13.jpg'
+            ], '💻 กิจกรรมเข้าร่วมค่ายอบรมเยาวชนสร้างสรรค์วัฒนธรรม', 'ภาพบรรยากาศการเรียนรู้ค่ายอบรมเยาวชนสร้างสรรค์วัฒนธรรม')">
+                <div class="img-zoom-container">
+                    <img src="img/activities/11.jpg" alt="Coding Camp">
+                </div>
+                <h3 style="font-size: 1.2rem; color: #0284c7; margin-bottom: 0.4rem;">💻 ค่ายอบรมเยาวชนสร้างสรรค์วัฒนธรรม</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    ภาพการเข้าร่วมทำกิจกรรมค่ายอบรมเยาวชนสร้างสรรค์วัฒนธรรม
+                </p>
+                <div style="margin-top: 0.8rem; font-size: 0.85rem; color: #0284c7; font-weight: 700;">🔍 คลิกเพื่อดูรูปเพิ่มเติม (4 รูป) &rarr;</div>
+            </div>
+
+            <!-- Activity 3 -->
+            <div class="activity-card" onclick="openGallery([
+                'img/activities/8.jpg',
+                'img/activities/9.jpg',
+                'img/activities/10.jpg'
+            ], '🤖 การเข้าร่วมกิจกรรม KITS-2026', 'ภาพบรรยากาศการการเข้าร่วมกิจกรรม KITS-2026')">
+                <div class="img-zoom-container">
+                    <img src="img/activities/8.jpg" alt="Robotics Competition">
+                </div>
+                <h3 style="font-size: 1.2rem; color: #0284c7; margin-bottom: 0.4rem;">🤖 การเข้าร่วมกิจกรรม KITS-2026</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    ภาพวันการเข้าร่วมกิจกรรม KITS-2026 ร่วมกับทีมงานอย่างสนุกสนาน
+                </p>
+                <div style="margin-top: 0.8rem; font-size: 0.85rem; color: #0284c7; font-weight: 700;">🔍 คลิกเพื่อดูรูปเพิ่มเติม (3 รูป) &rarr;</div>
+            </div>
+        </div>
+
+        <!-- Lightbox Modal Overlay Slider -->
+        <div id="activityModal" class="modal-overlay">
+            <div class="modal-container">
+                <button class="modal-close" onclick="closeGallery()">✕</button>
+                <div class="slider-wrapper">
+                    <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
+                    <img id="slideImg" class="slide-img" src="" alt="Activity Gallery Image">
+                    <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
+                </div>
+                <div class="modal-info">
+                    <div id="modalTitle" class="modal-title">ชื่อกิจกรรม</div>
+                    <div id="modalDesc" class="modal-desc">รายละเอียดกิจกรรม</div>
+                    <span id="slideCounter" class="slide-counter">รูปที่ 1</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2026 Crafted with 💖 & 💻 Code by Soft Cyber Tech Girl. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

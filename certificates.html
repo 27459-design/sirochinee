@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - เกียรติบัตรและรางวัล</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <navbar>
+        <div class="logo">Portfolio✨</div>
+        <ul class="nav-links">
+            <li><a href="index.html" >หน้าแรก</a></li><li><a href="about.html" >ประวัติส่วนตัว</a></li><li><a href="skills.html" >ทักษะ</a></li><li><a href="portfolio.html" >ผลงาน</a></li><li><a href="certificates.html" class="active">เกียรติบัตร</a></li><li><a href="activities.html" >รูปกิจกรรม</a></li><li><a href="goals.html" >เป้าหมาย</a></li><li><a href="contact.html" >ติดต่อ</a></li>
+        </ul>
+    </navbar>
+    
+    <main>
+        <h1 class="page-title">เกียรติบัตรและรางวัล (Certificates)</h1>
+        <p class="page-subtitle">ความภาคภูมิใจและวุฒิบัตรการเข้าร่วมกิจกรรม (เอาเมาส์ชี้เพื่อขยายอ่านชัดเจนขึ้น ✨)</p>
+
+        <div class="grid-3">
+            <!-- ใบที่ 1 (ใส่ 1 รูป -> ปุ่มเลื่อนจะซ่อนอัตโนมัติ) -->
+            <div class="activity-card" onclick="openGallery([
+                'img/certificates/1.jpg',
+            ], 'เกียรติบัตร', 'การบรมเชิงปฏิบัติการถ่ายทอดองค์ความรู้นวัตกรรมเทคโนโลยีด้านพังงานทางเลือก ปี2568')">
+                <div class="img-zoom-container">
+                    <img src="img/certificates/1.jpg" alt="Science Day">
+                </div>
+                <h3 style="font-size: 1.2rem; color: #db2777; margin-bottom: 0.4rem;">การบรมเชิงปฏิบัติการถ่ายทอดองค์ความรู้นวัตกรรมเทคโนโลยีด้านพังงานทางเลือก ปี2568</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                </p>
+            </div>
+
+            <!-- ใบที่ 2 (ใส่ 3 รูป -> ปุ่มเลื่อนจะแสดงตามปกติ) -->
+            <div class="activity-card" onclick="openGallery([
+                'img/certificates/2.jpg',
+            ], 'เกียรติบัตร', 'การอบรมเชิงปฏิบัติการ Youth Culture Media Creator เยาวชนสร้างสรรค์วัฒนธรรม')">
+                <div class="img-zoom-container">
+                    <img src="img/certificates/2.jpg" alt="Science Day">
+                </div>
+                <h3 style="font-size: 1.2rem; color: #db2777; margin-bottom: 0.4rem;">การอบรมเชิงปฏิบัติการ Youth Culture Media Creator เยาวชนสร้างสรรค์วัฒนธรรม</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                </p>
+            </div>
+
+
+            <!-- ใบที่ 3 (ใส่ 3 รูป -> ปุ่มเลื่อนจะแสดงตามปกติ) -->
+            <div class="activity-card" onclick="openGallery([
+                'img/certificates/7.jpg',
+            ], 'เกียรติบัตร', 'การรกวดนวัฒกรรมสำหรับพัฒนาท้องถิ่นอย่างยั่งยืน 2568')">
+                <div class="img-zoom-container">
+                    <img src="img/certificates/7.jpg" alt="Science Day">
+                </div>
+                <h3 style="font-size: 1.2rem; color: #db2777; margin-bottom: 0.4rem;">การรกวดนวัฒกรรมสำหรับพัฒนาท้องถิ่นอย่างยั่งยืน 2568</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                </p>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2026 Crafted with 💖 & 💻 Code by Soft Cyber Tech Girl. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- เพิ่มโครงสร้าง Pop-up Gallery (ปรับแก้ไขปุ่มเลื่อน) -->
+    <!-- ========================================== -->
+    <div id="galleryModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); backdrop-filter: blur(5px);">
+        <span onclick="closeGallery()" style="position: absolute; top: 20px; right: 35px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 20px;">
+            <h2 id="modalTitle" style="color: #fff; margin-bottom: 10px;">หัวข้อ</h2>
+            <p id="modalDesc" style="color: #ccc; margin-bottom: 20px; text-align: center; max-width: 600px;">รายละเอียด</p>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <button id="prevBtn" onclick="changeImg(-1)" style="background: rgba(255,255,255,0.2); border: none; color: white; font-size: 24px; cursor: pointer; padding: 10px 18px; border-radius: 50%;">&#10094;</button>
+                <img id="modalImage" src="" style="max-width: 80vw; max-height: 60vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <button id="nextBtn" onclick="changeImg(1)" style="background: rgba(255,255,255,0.2); border: none; color: white; font-size: 24px; cursor: pointer; padding: 10px 18px; border-radius: 50%;">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script ควบคุมการทำงานอัตโนมัติ -->
+    <script>
+        let currentImages = [];
+        let currentIndex = 0;
+
+        function openGallery(images, title, desc) {
+            currentImages = images;
+            currentIndex = 0;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            updateImage();
+
+            // เช็คจำนวนรูปเพื่อซ่อน/แสดงปุ่มเลื่อน
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            if (images.length <= 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'block';
+                nextBtn.style.display = 'block';
+            }
+
+            document.getElementById('galleryModal').style.display = "block";
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryModal').style.display = "none";
+        }
+
+        function changeImg(step) {
+            currentIndex += step;
+            if (currentIndex >= currentImages.length) { currentIndex = 0; }
+            if (currentIndex < 0) { currentIndex = currentImages.length - 1; }
+            updateImage();
+        }
+
+        function updateImage() {
+            document.getElementById('modalImage').src = currentImages[currentIndex];
+        }
+    </script>
+</body>
+</html>
